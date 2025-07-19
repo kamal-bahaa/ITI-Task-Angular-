@@ -73,21 +73,21 @@ export class UserComponent {
   },
   {
     "id": 2,
-    "firstName": "Michael",
-    "lastName": "Williams",
+    "firstName": "Kamal",
+    "lastName": "bahaa",
     "maidenName": "",
     "age": 35,
     "gender": "male",
-    "email": "michael.williams@x.dummyjson.com",
+    "email": "kamal.bahaa@x.dummyjson.com",
     "phone": "+49 258-627-6644",
-    "username": "michaelw",
-    "password": "michaelwpass",
+    "username": "kamal",
+    "password": "kamal",
     "birthDate": "1989-8-10",
     "image": "https://dummyjson.com/icon/michaelw/128",
     "bloodGroup": "B+",
     "height": 186.22,
-    "weight": 76.32,
-    "eyeColor": "Red",
+    "weight": 60,
+    "eyeColor": "blue",
     "hair": { "color": "Green", "type": "Straight" },
     "ip": "12.13.116.142",
     "address": {
@@ -1854,7 +1854,7 @@ export class UserComponent {
   searchUsers(): void {
     if (this.searchVal.trim()) {
       this.filteredUsers = this.Users.filter(user =>
-        user.email.toLowerCase().includes(this.searchVal.toLowerCase())
+        user.email.toLowerCase().startsWith(this.searchVal.toLowerCase())
       );
       this.showReset = true;
     } else {
