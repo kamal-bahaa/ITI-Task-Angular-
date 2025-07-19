@@ -38,11 +38,14 @@
                         <img [src]="item.image" alt="Profile Image" class="w-100 h-100" style="object-fit: cover;">
                     </div>
                     @if (item.role == "admin") {
-                    <span class="badge text-bg-danger">{{ item.role }}</span>
+                    <span class="badge text-bg-danger" style="display: inline-block; width: 80px; text-align: center;">{{ item.role
+                        }}</span>
                     } @else if (item.role == "user") {
-                    <span class="badge text-bg-success">{{ item.role }}</span>
+                    <span class="badge text-bg-success" style="display: inline-block; width: 80px; text-align: center;">{{ item.role
+                        }}</span>
                     } @else {
-                    <span class="badge text-bg-warning text-dark">{{ item.role }}</span>
+                    <span class="badge text-bg-warning text-dark" style="display: inline-block; width: 80px; text-align: center;">{{
+                        item.role }}</span>
                     }
                     <br>
                     <hr>
@@ -57,6 +60,7 @@
         <h1>No Users</h1>
         }
     </div>
+    
 
     <style>
         .card:hover {
